@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Pannello responsabile</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+	
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a href="" class="logo">Modalità: <strong>Responsabile</strong>
+					&nbsp; <img alt="" src="images/responsabile.png"></a>
+				<nav id="nav">
+					<a th:href="@{pannelloResponsabile}">Pannello di controllo</a> 
+					<a th:href="@{/ricercaAllievo}">Ricerca allievo</a>
+					<a th:href="@{/collegaAttivita}">Iscrivi allievo ad attività</a> 
+					<a th:href="@{/registraAllievo}">Registra nuovo allievo</a> 
+					<a th:href="@{/creaAttivita}">Crea nuova attività</a>
+					<a th:href="@{/logout}">Logout</a>
+				</nav>
+				<a href="#navPanel" class="navPanelToggle"><span
+					class="fa fa-bars"></span></a>
+			</div>
+		</header>
+	
+		<!-- Ricerca allievo -->
+		<!--  <div class="bgimgx"> -->
+	   
+	
+		<div id="particles-js">
+				<div class="btext">
+					<section id="ra" class="wrapper">
+						<div class="inner">
+							<header class="align-center">
+								<h2>
+									Benvenuto, <strong th:text="${username}"></strong>. Questo è il tuo
+									pannello di controllo!
+								</h2>
+							</header>
+							<p>
+								Da qui ti sarà possibile svolgere varie operazioni tramite
+								la barra di navigazione in alto. Le operazioni sono inerenti
+								esclusivamente alla gestione del proprio centro. Di seguito, c'è
+								una breve documentazione sulle operazioni disponibili:
+								<table>
+									<tr>
+										<td><b>Nome operazione</b></td>
+										<td><b>Descrizione operazione </b></td>
+										<td><b>Chiave di ricerca/associazione </b></td>
+		
+									</tr>
+									<tr>
+										<td><b><font color="green">Ricerca Allievo (UC1)</font></b></td>
+										<td>Tramite una form, sarà possibile trovare un allievo
+											iscritto in passato immettendo un indirizzo email</td>
+										<td><i><font color="red">Email allievo</font></i></td>
+									</tr>
+									<tr>
+										<td><b><font color="green">Iscrivi allievo ad attività (UC2)</font></b></td>
+										<td>Aggiunge un allievo alla lista di allievi di una certa attività
+										</td>
+										<td><i><font color="red">Codice attività, Email
+												allievo</font></i>
+										</td>
+									</tr>
+									<tr>
+										<td><b><font color="green">Registra nuovo allievo
+													(UC3)</font></b></td>
+										<td>Registra un nuovo allievo all'interno del sistema</td>
+										<td><i><font color="red">Nessuna</font></i></td>
+									</tr>
+									<tr>
+										<td><b><font color="green">Crea nuova attività
+													(UC4)</font></b></td>
+										<td>Crea una nuova attività all'interno del sistema</td>
+										<td><i><font color="red">Nessuna</font></i></td>
+									</tr>
+								</table>
+							</p>
+						</div>
+					</section>
+				</div><!-- CHIUSURA BTEXT -->
+		</div> <!--  CHIUSURA PARTICLES -->
+		<!-- </div>   -->
+	
+		<!-- Scripts -->
+		<script src="assets/js/nodi/particles.min.js"></script>
+		<script src="assets/js/nodi/app.js"></script>
+	
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	
+	</body>
+</html>

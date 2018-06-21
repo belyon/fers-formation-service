@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Registrazione nuovo allievo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+	
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="" class="logo">Modalità: <strong>Responsabile</strong> 
+					&nbsp; <img alt="" src="images/responsabile.png"></a>
+					<nav id="nav">
+						<a th:href="@{pannelloResponsabile}">Pannello di controllo</a>
+						<a th:href="@{/ricercaAllievo}">Ricerca allievo</a>
+						<a th:href="@{/collegaAttivita}">Iscrivi allievo ad attività</a>
+						<a th:href="@{/registraAllievo}">Registra nuovo allievo</a>
+						<a th:href="@{/creaAttivita}">Crea nuova attività</a>
+						<a th:href="@{/logout}">Logout</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+		
+		<!-- Allievo form -->
+		<div id="particles-js">
+			<div class="btext">
+				<section id="ra" class="wrapper">
+					<div class="inner">
+						<header class="align-center">
+							<h2>Registra nuovo allievo</h2>
+						</header>
+						<p>
+							<font color="red" size="5"><div th:text="${erroreFormAllievo}"></div></font>
+							<font color="red" size="5"><div th:text="${esisteAllievo}"></div></font>
+							<font color="red" size="5"><div th:text="${troppiAllievi}"></div></font>
+							<br>
+							<div>Inserisci i dati dell'allievo da registare:</div><br>
+	
+							<form th:action="@{/registerAllievo}" method="POST" th:object="${allievo}">
+							
+								<div> 
+									<b>Nome: </b>
+									<font color="red" ><span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span></font> 
+									<input type="text" placeholder="Inserisci Nome" th:field="*{nome}" />
+								</div><br>
+								<div> 
+									<b>Cognome: </b>
+									<font color="red"><span th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}"></span></font>
+									<input type="text" placeholder="Inserisci Cognome"  th:field="*{cognome}" /> 
+								</div><br>
+								
+								<div> 
+									<b>Email: </b>
+									<font color="red"><span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span></font>
+									<input type="email" placeholder="Inserisci Email" th:field="*{email}" />
+								</div><br>
+								
+								<div> 
+									<b>Telefono: </b>
+									<font color="red"><span th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}"></span></font>
+									<input type="text" placeholder="Inserisci Telefono" th:field="*{telefono}" /> 
+								</div><br>
+								
+								<div> 
+									<b>Luogo di nascita: </b>
+									<font color="red"><span th:if="${#fields.hasErrors('luogo')}" th:errors="*{luogo}"></span></font>
+									<input type="text" placeholder="Inserisci Luogo di nascita"  th:field="*{luogo}" /> 
+								</div><br>
+								<div> 
+									<b>Data di nascita: </b>
+									<font color="red"><span th:if="${#fields.hasErrors('data')}" th:errors="*{data}"></span></font><br>
+									<input type="date" th:field="*{data}" />
+								</div>
+								<br>
+								<input type="submit" value="Invia" /> 
+								<input type="reset" value="Ripristina" />
+							</form>
+						</p>
+					</div>
+				</section>
+			</div>
+		</div> <!-- chisura particles -->
+		<!-- Scripts -->
+		<script src="assets/js/nodi/particles.min.js"></script>
+		<script src="assets/js/nodi/app.js"></script>
+			
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

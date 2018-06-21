@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Mostra lista attività</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="subpage">
+		
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a href="" class="logo">Modalità: <strong>Responsabile</strong> 
+				&nbsp; <img alt="" src="images/responsabile.png"></a>
+				<nav id="nav">
+					<a th:href="@{pannelloResponsabile}">Pannello di controllo</a>
+					<a th:href="@{/ricercaAllievo}">Ricerca allievo</a>
+					<a th:href="@{/collegaAttivita}">Iscrivi allievo ad attività</a>
+					<a th:href="@{/registraAllievo}">Registra nuovo allievo</a>
+					<a th:href="@{/creaAttivita}">Crea nuova attività</a>
+					<a th:href="@{/logout}">Logout</a>
+				</nav>
+				<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+			</div>
+		</header>
+		
+		<!-- Allievo trovato  -->
+		<div id="particles-js">
+			<div class="btext">
+				<section id="ra" class="wrapper">
+					<div class="inner">
+						<header class="align-center">
+							<h2>Mostra allievi dell'attività con nome <b>"<span th:text="${attivita.nome}"></span>"</b></h2>
+						</header>
+	
+						<p>
+							Qui di seguito sono riportati l'email e l'id di tutto gli allievi iscritti a questa
+							attività:
+						
+							<table border="3" align="center">
+								<tr>
+									<td><b>Id allievo</b></td>
+									<td><b>Email allievo</b></td>
+								
+								</tr>
+								<tr th:each="allievo : ${allievi}">
+									<td>
+									<b><font color="green"><span th:text="${allievo.id}"></span></font></b>
+									</td>
+									<td>
+									<b><font color="green"><span th:text="${allievo.email}"></span></font>
+									</td>
+								</tr>
+							</table>
+						</p>
+					</div>
+				</section>
+			</div>
+		</div> <!-- chisura particles -->
+		
+		<!-- Scripts -->
+		<script src="/assets/js/nodi/particles.min.js"></script>
+		<script src="/assets/js/nodi/app.js"></script>
+			
+		<script src="/assets/js/jquery.min.js"></script>
+		<script src="/assets/js/skel.min.js"></script>
+		<script src="/assets/js/util.js"></script>
+		<script src="/assets/js/main.js"></script>
+	</body>
+</html>

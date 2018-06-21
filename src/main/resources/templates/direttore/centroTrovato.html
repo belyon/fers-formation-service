@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Centro trovato!</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a href="" class="logo">Modalità: <strong>Direttore</strong> 
+				&nbsp; <img alt="" src="images/direttore.png"></a></a>
+				<nav id="nav">
+					<a th:href="@{pannelloAzienda}">Pannello di controllo</a>
+					<a th:href="@{/ricercaCentro}">Ricerca centro</a>
+					<a th:href="@{/aggiungiCentro}">Aggiungi centro</a>
+					<a th:href="@{/logout}">Logout</a>
+				</nav>
+				<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+			</div>
+		</header>
+		
+		<!-- Ricerca allievo -->
+		<div id="particles-js">
+			<div class="btext">
+				<section id="ra" class="wrapper">
+					<div class="inner">
+						<header class="align-center">
+							<h2>Il centro è stato trovato con successo!</h2>
+						</header>
+						<p> <center><font size="5">
+							Il centro con email <b>"<span th:text="${centro.email}"></span>"</b>è stato trovato. 
+							Ecco i suoi dati:
+							<br>
+							<br>
+							<div>
+								<span><b>Nome: </b><span th:text="${centro.nome}"></span>
+						   	</div>
+							<div>
+								<span> <b>Indirizzo: </b><span th:text="${centro.indirizzo}"></span>
+						   	</div>
+							<div>
+								<span> <b> Email: </b><span th:text="${centro.email}"></span>
+						   	</div>
+						   	<div>
+								<span> <b>Telefono: </b><span th:text="${centro.telefono}"></span>
+						   	</div>
+						   	</font></center>
+						   	<br>
+							<br>
+							
+							Ecco la lista degli allievi iscritti a questo centro:
+							<br>
+							<br>
+							<table border="3" align="center">
+								<tr>
+									<td><b>Codice allievo</b></td>
+									<td><b>Nome</b></td>
+									<td><b>Cognome</b></td>
+									<td><b>Email</b></td>
+									<td><b>Telefono</b></td>
+									<td><b>Data di nascita</b></td>
+									<td><b>Luogo di nascita</b></td>
+								</tr>
+								<tr th:each="allievo : ${allieviCentro}">
+									<td><b><font color="green"><span th:text="${allievo.id}"></span></font></b></td>
+									<td><b><font color="green"><span th:text="${allievo.nome}"></span></font></td>
+									<td><b><font color="green"><span th:text="${allievo.cognome}"></span></font></td>
+									<td><b><font color="green"><span th:text="${allievo.email}"></span></font></td>
+									<td><b><font color="green"><span th:text="${allievo.telefono}"></span></font></td>
+									<td><b><font color="green"><span th:text="${allievo.data}"></span></font></td>
+									<td><b><font color="green"><span th:text="${allievo.luogo}"></span></font></td>
+								</tr>
+							</table>
+							
+							Ecco la lista delle attivita di questo centro: 
+						   	<br>
+						   	<br>
+						   	<table border="3" align="center">
+								<tr>
+									<td><b>Codice attività</b></td>
+									<td><b>Nome attività</b></td>
+									<td><b>Data</b></td>
+									<td><b>Ora di inizio</b></td>
+									<td><b>Ora di fine</b></td>
+								</tr>
+								<tr th:each="attivita : ${attivitaCentro}">
+									<td><b><font color="green"><span th:text="${attivita.id}"></span></font></b></td>
+									<td><b><font color="green"><span th:text="${attivita.nome}"></span></font></td>
+									<td><b><font color="green"><span th:text="${attivita.data}"></span></font></td>
+									<td><b><font color="green"><span th:text="${attivita.oraInizio}"></span></font></td>
+									<td><b><font color="green"><span th:text="${attivita.oraFine}"></span></font></td>
+								</tr>
+							</table>
+						</p>
+					</div>
+				</section>
+			</div>
+		</div> <!-- chisura particles -->
+
+		<!-- Scripts -->
+		<script src="assets/js/nodi/particles.min.js"></script>
+		<script src="assets/js/nodi/app.js"></script>
+		
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

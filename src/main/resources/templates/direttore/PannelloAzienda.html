@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Pannello direttore</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+	
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a href="" class="logo">Modalità: <strong>Direttore</strong> 
+				&nbsp; <img alt="" src="images/direttore.png"></a></a>
+				<nav id="nav">
+					<a th:href="@{pannelloAzienda}">Pannello di controllo</a>
+					<a th:href="@{/ricercaCentro}">Ricerca centro</a>
+					<a th:href="@{/aggiungiCentro}">Aggiungi centro</a>
+					<a th:href="@{/logout}">Logout</a>
+				</nav>
+				<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+			</div>
+		</header>
+		
+		<!-- Ricerca allievo -->
+		<div id="particles-js">
+			<div class="btext">
+				<section id="ra" class="wrapper">
+					<div class="inner">
+						<header class="align-center">
+							<h2>Benvenuto,<strong th:text="${username}"></strong>. Questo è il tuo pannello di controllo!</h2>
+						</header>
+						<p> 
+							Da qui ti sarà possibile svolgere varie operazioi tramite la barra di navigazione in alto.
+							Le operazioni sono inerenti alla gestione di tutti i centri.
+							Di seguito c'è una breve documentazione sulle operazioni disponibili:
+							<table>
+	 							<tr>
+									<td> <b>Nome operazione</b></td>
+									<td> <b>Descrizione operazione </b></td>
+									<td> <b>Chiave di ricerca/associazione </b></td>
+								</tr>
+								<tr>
+									<td><b><font color="green">Ricerca centro (UC5)</font></b></td>
+									<td>Tramite una form, sarà possibile trovare un centro iscritto
+									in passato immettendo un indirizzo email</td>
+									<td><i><font color="red">Email centro</font></i></td>
+								</tr>
+								<tr>
+									<td><b><font color="green">Aggiungi centro (UC6)</font></b></td>
+									<td>Aggiunge un centro alla lista di centri iscritti all'azienda
+									dell'azienda</td>
+									<td><i><font color="red">Nessuna</font></i></td>
+								</tr>
+							</table>
+						</p>
+					</div>
+				</section>
+			</div>
+		</div> <!-- chisura particles -->
+	
+		<!-- Scripts -->
+		<script src="assets/js/nodi/particles.min.js"></script>
+		<script src="assets/js/nodi/app.js"></script>
+			
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

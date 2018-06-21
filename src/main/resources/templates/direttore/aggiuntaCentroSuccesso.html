@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+<head>
+<title>Centro aggiunto con successo!</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="subpage">
+
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="" class="logo">Modalità: <strong>Direttore</strong>
+				&nbsp; <img alt="" src="images/direttore.png"></a></a>
+			<nav id="nav">
+				<a th:href="@{pannelloAzienda}">Pannello di controllo</a> 
+				<a th:href="@{/ricercaCentro}">Ricerca centro</a> 
+			    <a th:href="@{/aggiungiCentro}">Aggiungi centro</a>
+			    <a th:href="@{/logout}">Logout</a>
+					
+			</nav>
+			<a href="#navPanel" class="navPanelToggle"><span
+				class="fa fa-bars"></span></a>
+		</div>
+	</header>
+
+	<!-- Aggiunta centro successo -->
+	<div id="particles-js">
+		<div class="btext">
+			<section id="ra" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Centro aggiunto con successo!</h2>
+					</header>
+					<p><center><font size="5">
+						Ecco un riepilogo dei dati del centro appena aggiunto:
+						<br>
+						<br>
+						
+					<div>
+						<span><b>Nome:</b> <span th:text="${centro.nome}"></span>
+					</div>
+					<div>
+						<span> <b>Cognome: </b> <span th:text="${centro.indirizzo}"></span>
+					</div>
+					<div>
+						<span> <b> Email: </b><span th:text="${centro.email}"></span>
+					</div>
+					<div>
+						<span> <b>Telefono: </b> <span th:text="${centro.telefono}"></span>
+					</div>
+					<div>
+						<span> <b>Numero massimo di allievi: </b><span th:text="${centro.maxA}"></span>
+					</div>
+					</font>
+					</center>
+					</p>
+				</div>
+			</section>
+		</div> 
+	</div>
+	
+	<!-- Scripts -->
+	<script src="assets/js/nodi/particles.min.js"></script>
+	<script src="assets/js/nodi/app.js"></script>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>

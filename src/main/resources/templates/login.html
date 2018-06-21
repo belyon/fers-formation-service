@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>FERS: LOGIN</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a th:href="@{/login}"  class="logo"><strong>FERS</strong> COMPANY</a>
+				<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+			</div>
+		</header>
+
+		<!-- Banner -->
+		<section id="banner">
+			<div class="inner">
+				<header>
+					<h1><span class="icon fa-key"></span><br><br>Login</h1>
+					<font color="white" size="4">In questa pagina è possibile eseguire il login come responsabile (per la gestione del proprio centro)
+					 o come direttore (per la gestione aziendale)</font>
+				</header>
+
+			
+
+				<footer>
+					
+				</footer>
+			</div>
+		</section>
+
+		<!-- Footer --> 
+		<footer id="footer">
+			<div class="inner">
+				
+				<font color="white"><span th:text="${erroreLogin}"></span></font>
+				<p> 
+				Digita il tuo username e password per accedere ai nostri servizi! </p>
+					<form th:action="@{/login}" method="post" th:object="${responsabile}">
+						<div class="field half first">
+							<label for="name"><span class="icon fa-user"></span>   Username:</label>
+							<input name="name" id="username" type="text" placeholder="Username" th:field="*{username}">
+						</div>
+						<div class="field half">
+							<label for="email"><span class="icon fa-code"></span>   Password:</label>
+							<input name="email" id="email" type="password" placeholder="Password" th:field="*{password}">
+						</div>
+						<ul class="actions">
+							<li><input value="Login" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+					
+					<!--  <a th:href="@{/pannelloAzienda}" class="button alt">Pannello azienda</a> -->
+				</p>
+			</div>
+		</footer>
+		
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	
+	</body>
+</html>
