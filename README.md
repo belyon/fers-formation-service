@@ -5,6 +5,9 @@
 ## Nome dell'applicazione:
 FERS-FORMATION-SERVICE
 
+## Nome del database utilizzato in POSTGRES
+fers-formation-service
+
 ## Info:
 
 Abbiamo lavorato sempre insieme in sede universitaria per facilitare l'organizzazione ed ottimizzare il tempo, utilizzando GitHub solo per il commit finale del progetto.
