@@ -12,6 +12,9 @@ fers-formation-service
 
 Abbiamo lavorato sempre insieme in sede universitaria per facilitare l'organizzazione ed ottimizzare il tempo, utilizzando GitHub solo per i commit finali sul progetto. Inoltre (all'interno della cartella principale), è presente il progetto in formato in zip.
 
+## Class Diagram
+![alt text](https://github.com/belyon/fers-formation-service/blob/master/classDiagram.jpg)
+
 ## Descrizione del sistema:
 
 Il fers-formation-service è un sistema informativo per la gestione di centri di formazione.
