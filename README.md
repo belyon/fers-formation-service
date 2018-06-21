@@ -2,7 +2,7 @@
 # RICCARDO SPANO 449367
 # FABRIZIO EGIDDI 489136
 
-## Nome dell'applicazione:
+## Nome dell'applicazione: 
 FERS-FORMATION-SERVICE
 
 ## Nome del database utilizzato in POSTGRES
@@ -91,7 +91,7 @@ dati immessi nella form:
   UC6: AGGIUNGI CENTRO - ATTORE PRIMARIO: DIRETTORE
   1. Il direttore clicca sulla barra di navigazione l'operazione "Aggiungi centro"
   2. Il direttore immette i dati del centro
-  3. Il sistema mostra una pagina della corretta iscrizione del centro
+  3. Il sistema mostra una pagina della corretta iscrizione del centro.
 
   
  
