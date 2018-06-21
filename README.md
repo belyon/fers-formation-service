@@ -10,7 +10,7 @@ fers-formation-service
 
 ## Info:
 
-Abbiamo lavorato sempre insieme in sede universitaria per facilitare l'organizzazione ed ottimizzare il tempo, utilizzando GitHub solo per il commit finale del progetto.
+Abbiamo lavorato sempre insieme in sede universitaria per facilitare l'organizzazione ed ottimizzare il tempo, utilizzando GitHub solo per i commit finali sul progetto.
 
 ## Descrizione del sistema:
 
